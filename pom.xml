@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.develrage.tutorials</groupId>
+    <artifactId>mkyong-jaxrs-tutorial</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <properties>
+        <war.target0>\\ubusrv3.intra\example-webapps\webapps\</war.target0>
+    </properties>
+
+    <dependencies>
+        <!-- jersey REST implementation -->
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>1.8</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>hellorest</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <outputDirectory>${war.target0}</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

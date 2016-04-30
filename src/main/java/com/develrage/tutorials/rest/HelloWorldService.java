@@ -13,7 +13,7 @@ public class HelloWorldService {
     @GET
     @Path("/{param}")
     public Response getMsg(@PathParam("param") String msg) {
-        String output = String.format("RESTEasy say: %s! So nice! App version: %s", msg, getAppVersion());
+        String output = String.format("Jersey say: %s!\nSo nice!\nApp version: %s", msg, getAppVersion());
 
         return Response.status(200).entity(output).build();
     }

@@ -14,3 +14,6 @@ Jersey hello world example, http://www.mkyong.com/webservices/jax-rs/jersey-hell
 ### 2.0
 RESTEasy hello world example, http://www.mkyong.com/webservices/jax-rs/resteasy-hello-world-example/
 
+### 3.x
+JAX-RS @Path URI matching example, http://www.mkyong.com/webservices/jax-rs/jax-rs-path-uri-matching-example/
+

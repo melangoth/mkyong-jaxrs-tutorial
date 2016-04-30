@@ -18,3 +18,9 @@ RESTEasy hello world example, http://www.mkyong.com/webservices/jax-rs/resteasy-
 
 ### 3.3
 JAX-RS @Path URI matching example, http://www.mkyong.com/webservices/jax-rs/jax-rs-path-uri-matching-example/
+
+## Future plans
+* Annotation examples in Basic Examples section
+* JSON example with Jersey + Jackson
+* RESTful Java client with Jersey client
+* Jersey + Spring integration example

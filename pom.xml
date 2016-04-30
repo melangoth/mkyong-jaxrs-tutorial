@@ -6,7 +6,7 @@
 
     <groupId>com.develrage.tutorials</groupId>
     <artifactId>mkyong-jaxrs-tutorial</artifactId>
-    <version>3.0-SNAPSHOT</version>
+    <version>3.2-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <properties>

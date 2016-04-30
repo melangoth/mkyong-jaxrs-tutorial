@@ -23,7 +23,18 @@ public class UserRestService {
     public Response getUserByName(@PathParam("name") String name) {
         StringBuilder output = new StringBuilder();
 
-        output.append("getUserByName is called");
+        output.append("getUserByName is called, name: " + name);
+        Helper.appendAppVersion(output);
+
+        return Response.status(200).entity(output.toString()).build();
+    }
+
+    @GET
+    @Path("{id : \\d+}") //support digit only
+    public Response getUserById(@PathParam("id") String id) {
+        StringBuilder output = new StringBuilder();
+
+        output.append("getUserById is called, id: " + id);
         Helper.appendAppVersion(output);
 
         return Response.status(200).entity(output.toString()).build();

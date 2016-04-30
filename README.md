@@ -4,7 +4,9 @@ I am going to go through this tutorial:
 http://www.mkyong.com/tutorials/jax-rs-tutorials/
 
 I strongly recommend you to visit http://www.mkyong.com!
-By the way I am not realated by any means with that page, I just frequently ended up there anytime I searched for a good tutorial.
+By the way I am not realated by any means with that page, I just frequently end up there anytime I search for a good tutorial.
+
+The way I do this tutorial: I do not deal with the provided sources, I implement them by my self, reading the tutorial, selecting the parts I am really interested in. Sometimes I implement them with minor modifications, or ignore some parts.
 
 ## Versions
 
@@ -16,4 +18,3 @@ RESTEasy hello world example, http://www.mkyong.com/webservices/jax-rs/resteasy-
 
 ### 3.3
 JAX-RS @Path URI matching example, http://www.mkyong.com/webservices/jax-rs/jax-rs-path-uri-matching-example/
-

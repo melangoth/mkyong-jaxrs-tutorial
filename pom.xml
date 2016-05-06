@@ -6,7 +6,7 @@
 
     <groupId>com.develrage.tutorials</groupId>
     <artifactId>mkyong-jaxrs-tutorial</artifactId>
-    <version>4.0</version>
+    <version>4.3.1</version>
     <packaging>war</packaging>
 
     <properties>
@@ -14,18 +14,24 @@
         <war.target0>\\ubusrv3.intra\example-webapps\webapps\</war.target0>
         <war.finalname>jaxrs-tutorial</war.finalname>
         <glassfish.version>2.22.1</glassfish.version>
-        <jetty.version>9.3.8.v20160314</jetty.version>
+        <jetty.docker.version>9.3.8.v20160314</jetty.docker.version>
+        <jetty.embedded.version>9.1.1.v20140108</jetty.embedded.version>
     </properties>
 
     <dependencies>
-        <!-- glassfish jersey -->
+        <!-- logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.13</version>
+        </dependency>
+
+        <!-- glassfish jersey, jetty -->
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-server</artifactId>
             <version>${glassfish.version}</version>
         </dependency>
-
-        <!-- test, glassfish, jetty -->
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet-core</artifactId>
@@ -36,22 +42,18 @@
             <artifactId>jersey-container-jetty-http</artifactId>
             <version>${glassfish.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-moxy</artifactId>
-            <version>${glassfish.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-server</artifactId>
-            <version>${jetty.version}</version>
-        </dependency>
 
-        <!-- test, junit -->
+        <!-- test, junit, embedded jetty -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>${jetty.embedded.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

@@ -93,4 +93,35 @@ public class ServletTest {
             conn.disconnect();
         }
     }
+
+    @Test
+    public void usersTest() throws Exception {
+        log.info("Users JAXRS Tutorial Test!");
+        URL url = new URL(String.format("%s:%d%s%s/users/mgh", TEST_HOST, TEST_PORT, TEST_PATH, TEST_USERS_SERVICE));
+        HttpURLConnection conn = null;
+
+        log.info(String.format("Sending resquest to: %s", url.toString()));
+        try {
+            conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setRequestProperty("Accept", "text/plain");
+
+            log.debug(String.format("Response code: %d", conn.getResponseCode()));
+            assert conn.getResponseCode() == 200;
+
+            BufferedReader br = new BufferedReader(new InputStreamReader(
+                    (conn.getInputStream())));
+
+            StringBuilder output = new StringBuilder();
+            String line;
+            while ((line = br.readLine()) != null) {
+                output.append("\n" + line);
+            }
+
+            log.debug(String.format("\n--- Server response content: ---%s\n---", output));
+            assert output.toString().contains("getUserByName is called, name: mgh");
+        } finally {
+            conn.disconnect();
+        }
+    }
 }

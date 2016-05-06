@@ -1,4 +1,4 @@
-package com.develrage.tutorials.rest;
+package com.develrage.tutorials.jaxrs;
 
 import java.io.IOException;
 import java.util.Properties;

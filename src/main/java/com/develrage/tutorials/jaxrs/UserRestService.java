@@ -1,4 +1,4 @@
-package com.develrage.tutorials.rest;
+package com.develrage.tutorials.jaxrs;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

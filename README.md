@@ -23,7 +23,9 @@ JAX-RS @Path URI matching example, http://www.mkyong.com/webservices/jax-rs/jax-
 Newer libraries (glassfish-jersey, jetty)
 
 ### 4.x
-Deployment and embedded test, https://jersey.java.net/documentation/latest/deployment.html
+Deployment and embedded test
+* https://jersey.java.net/documentation/latest/deployment.html
+* https://www.acando.no/thedailypassion/200555/a-rest-service-with-jetty-and-jersey
 
 ## Future plans
 * Annotation examples in Basic Examples section
